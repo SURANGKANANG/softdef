@@ -141,7 +141,7 @@ body {
 .name {
   font-size: 18px;
   color: #333;
-  top: 100px;
+  top: 500px;
   padding-top: 100px;
 
 }
@@ -150,7 +150,19 @@ body {
   color: #333;
 }
 
-
+.profile_image {
+    display: flex;
+    min-width: 55px;
+    justify-content: center;
+}
+.profile_image img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    transform: translateY(-85px); 
+}
+  
 
 .navbar,
 .navbar-second {
@@ -193,7 +205,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 50px ;
+  margin-right: 50px;
   background-color: #FFF9E1;
   color: #333;
   padding: 10px 30px;
@@ -202,15 +214,16 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
+
 .my-button:first-child {
-  margin-left: 250px; /* ปุ่มแรกมีระยะห่างด้านซ้าย */
-}
-.my-button:not(:first-child) {
-  margin-left: 50px; /* ปุ่มอื่นๆ มีระยะห่างด้านซ้ายเหมือนกัน */
+  margin-left: 250px; /* ปุ่มแรกมีระยะห่างด้านซ้าย 250px */
 }
 
+.my-button:not(:first-child) {
+  margin-left: 0; /* ปุ่มอื่น ๆ ไม่มีระยะห่างด้านซ้าย (เหมือนเดิม) */
+}
 .my-button:hover {
-  background-color: #fff;
+  background-color: #F39032;
   color: #333;
 }
 
@@ -220,8 +233,8 @@ body {
   width: 400px;
   position: absolute;
 
-  top: 30px; /* หากต้องการให้อยู่ที่ขอบบนของโครงหน้า */
-  left: 300px; /* ระยะห่างจากขอบซ้าย 250px */
+  top: 30px; 
+  left: 300px; 
   border: 1px solid #FE547B;
   outline: none;
   border-radius: 50px;
@@ -229,7 +242,7 @@ body {
   font-size: 15px;
   font-weight: bold;
   color: #333;
-  transform: none; /* เราไม่จำเป็นต้องใช้ transform: translateX(20%) อีก */
+  transform: none;
 }
 .rectangle {
   position: absolute;
@@ -241,15 +254,16 @@ body {
   border-radius: 20px;
   z-index: 2;
 }
+
 .rectangle-two {
-  position: absolute;
+  position: absolute; 
   width: 55px;
   height: 40px;
-  left: 150px;
+  left: 645px; 
   top: 30px;
   background: #00C2C1;
   border-radius: 20px;
-  z-index: 2;
+  z-index: 2; /* เพิ่ม z-index เป็น 2 */
 }
 .rectangle i {
   position: absolute;
@@ -258,6 +272,14 @@ body {
   top: 15px;
   align-items: center;
   left: 18px;
+}
+.rectangle-two i {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 15px;
+  align-items: center;
+  left: 18px; 
 }
 .navbar-image {
   height: auto; /* ทำให้ความสูงปรับตามอัตราส่วน */
